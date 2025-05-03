@@ -1,0 +1,27 @@
+space_sim/
+├── main.py
+├── config.py
+├── requirements.txt
+├── README.md
+├── assets/                # Images, sounds, etc.
+│   └── ships/
+├── engine/                # Core engine logic
+│   ├── __init__.py
+│   ├── physics.py         # Forces, motion, integrators
+│   ├── entities.py        # Base classes: Body, Ship, Planet
+│   ├── vector.py          # 2D vector math (extendable to 3D)
+│   └── camera.py          # Viewport/camera controls (easy to expand for 3D)
+├── simulation/            # Simulation-specific objects and logic
+│   ├── __init__.py
+│   ├── solar_system.py    # Setup for your solar system or scene
+│   └── scenarios.py       # Preset scenarios (e.g., orbit transfer, gravity slingshot)
+├── rendering/             # Handles drawing
+│   ├── __init__.py
+│   ├── renderer.py        # High-level rendering logic
+│   └── sprites.py         # Load and manage sprite assets
+├── ui/                    # GUI or debug HUDs
+│   ├── __init__.py
+│   └── hud.py
+└── utils/                 # Misc utilities (timers, logging)
+    ├── __init__.py
+    └── profiler.py

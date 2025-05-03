@@ -14,7 +14,7 @@ class Renderer:
         # Draw each entity
         for entity in entities:
             # Get the position of the entity relative to the camera
-            pos = self.camera.apply(entity.rect)
+            pos = self.camera.apply(entity.position)
             pygame.draw.circle(self.screen, entity.color, pos, entity.radius)
 
         # Update the display

@@ -3,4 +3,4 @@ __env__/
 
 # Ignores my struct.txt file
 # This file is used to store the concept structure of the project
-struct.txt
+struct.txt-
