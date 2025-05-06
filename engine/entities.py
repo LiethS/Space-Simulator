@@ -6,10 +6,10 @@ class Entity:
     def __init__(self, position, velocity, mass, radius, color):
         self.position = position  # [x, y]
         self.velocity = velocity  # [vx, vy]
+        self.force = [0.0, 0.0]  # Reset each frame
         self.mass = mass
         self.radius = radius
         self.color = color
-        self.force = [0.0, 0.0]  # Reset each frame
 
     def apply_force(self, fx, fy):
         self.force[0] += fx
