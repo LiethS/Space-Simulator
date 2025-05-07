@@ -1,8 +1,8 @@
 # config.py
 
 # Screen settings
-SCREEN_WIDTH = 720
-SCREEN_HEIGHT = 720
+SCREEN_WIDTH = 1920
+SCREEN_HEIGHT = 1080
 FPS = 60
 
 # Physics settings
