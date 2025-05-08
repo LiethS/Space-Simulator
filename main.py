@@ -19,6 +19,12 @@ def main():
     # Create simulation objects
     entities = setup_solar_system()
 
+
+    # Camera movement
+    camera_speed = 20
+    # Camera zoom
+    zoom_speed = 0.1
+
     running = True
     while running:
         dt = clock.tick(FPS) / 1000  # Delta time in seconds
@@ -36,6 +42,24 @@ def main():
 
         for entity in entities:
             update(entity, dt * 1000)
+
+        keys = pygame.key.get_pressed()
+        
+        # Camera movement
+        if keys[pygame.K_a]:  # Move left
+            camera.offset[0] += camera_speed
+        if keys[pygame.K_d]:  # Move right
+            camera.offset[0] -= camera_speed
+        if keys[pygame.K_w]:  # Move up
+            camera.offset[1] += camera_speed
+        if keys[pygame.K_s]:  # Move down
+            camera.offset[1] -= camera_speed
+
+        # Camera zoom
+        if keys[pygame.K_q]:  # Zoom in
+            camera.zoom *= (1 + zoom_speed)
+        if keys[pygame.K_e]:  # Zoom out
+            camera.zoom *= (1 - zoom_speed)
 
         # Draw everything
         renderer.render(entities)

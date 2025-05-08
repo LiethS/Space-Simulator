@@ -9,7 +9,7 @@ class Renderer:
         
     def render(self, entities):
         # Clear the screen
-        self.screen.fill((0, 0, 0))
+        self.screen.fill((10, 10, 30))
 
         # Draw each entity
         for entity in entities:
