@@ -15,4 +15,4 @@ COLOR_PLANET = (0, 0, 255)
 
 # Entity default sizes
 RADIUS_SUN = 30
-RADIUS_PLANET = 10
+RADIUS_PLANET = 5
