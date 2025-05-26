@@ -3,6 +3,7 @@ from engine.entities import Planet
 from config import RADIUS_SUN, RADIUS_PLANET
 from config import COLOR_SUN, COLOR_PLANET
 
+
 def setup_solar_system():
     # Sun: massive and stationary
     sun = Planet(
@@ -34,7 +35,7 @@ def setup_solar_system():
 
     moon = Planet(
         name="Moon",
-        position=[151.3044, 0.0],
+        position=[150.3044, 0.0],
         velocity=[0.0, 0.040802],
         mass=0.000007347,
         radius=RADIUS_PLANET,
